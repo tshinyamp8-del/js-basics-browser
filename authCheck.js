@@ -1,21 +1,22 @@
-let acces === prompt("etes-vous connecté?(Oui/Non");
-let role === prompt("votre role?(admin, utilisateur, invité");
-if (acces === Oui); {
+let isConnected = prompt("Êtes-vous connecté ? (oui/non)");
+let role = prompt("Votre rôle ? (admin, utilisateur, invité)");
 
-    if (role === admin); {
+// Convertir en minuscules pour éviter les erreurs
+isConnected = isConnected.toLowerCase();
+role = role.toLowerCase();
+
+if (isConnected === "oui") {
+
+    if (role === "admin") {
         console.log("Bienvenue admin");
-
-    } else if (role === utilisateur) {
-        console.log("Bienvenue utilisateur")
-
+    } else if (role === "utilisateur") {
+        console.log("Bienvenue utilisateur");
     } else if (role === "invité") {
-        console.log("Accès restreint(invité)");
-    } else
-        console.log("Role inconnu");
-}
+        console.log("Accès invité limité");
+    } else {
+        console.log("Rôle inconnu");
+    }
 
-   } else if (accès === "non") {
-    console.log("Veuillez vous connecter");
 } else {
-    console.log("Reponse invalide");
+    console.log("Veuillez vous connecter");
 }
