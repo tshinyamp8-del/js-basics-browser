@@ -1,7 +1,6 @@
 let isConnected = prompt("Êtes-vous connecté ? (oui/non)");
-let role = prompt("Votre rôle ? (admin, utilisateur, invité)");
+let role = prompt("Quel est votre rôle ? (admin/utilisateur)");
 
-// Convertir en minuscules pour éviter les erreurs
 isConnected = isConnected.toLowerCase();
 role = role.toLowerCase();
 
@@ -11,10 +10,8 @@ if (isConnected === "oui") {
         console.log("Bienvenue admin");
     } else if (role === "utilisateur") {
         console.log("Bienvenue utilisateur");
-    } else if (role === "invité") {
-        console.log("Accès invité limité");
     } else {
-        console.log("Rôle inconnu");
+        console.log("Accès restreint");
     }
 
 } else {
